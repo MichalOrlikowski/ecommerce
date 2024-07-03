@@ -1,0 +1,142 @@
+[
+    {
+      "id": 1,
+      "name": "Telefon XYZ",
+      "price": 1999.99,
+      "description": "Nowoczesny smartfon z dużym ekranem i szybkim procesorem.",
+      "imageUrl": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 2,
+      "name": "Laptop ABC",
+      "price": 2999.99,
+      "description": "Wydajny laptop idealny do pracy i rozrywki.",
+      "imageUrl": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 3,
+      "name": "Tablet 123",
+      "price": 999.99,
+      "description": "Lekki tablet z długim czasem pracy na baterii.",
+      "imageUrl": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 4,
+      "name": "Słuchawki QWE",
+      "price": 299.99,
+      "description": "Bezprzewodowe słuchawki z doskonałą jakością dźwięku.",
+      "imageUrl": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 5,
+      "name": "Smartwatch RST",
+      "price": 499.99,
+      "description": "Zaawansowany smartwatch z wieloma funkcjami zdrowotnymi.",
+      "imageUrl": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 6,
+      "name": "Kamera YUI",
+      "price": 1299.99,
+      "description": "Profesjonalna kamera do nagrywania wideo w wysokiej rozdzielczości.",
+      "imageUrl": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 7,
+      "name": "Głośnik BNM",
+      "price": 399.99,
+      "description": "Przenośny głośnik z potężnym basem.",
+      "imageUrl": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 8,
+      "name": "Monitor VFR",
+      "price": 799.99,
+      "description": "Duży monitor o wysokiej rozdzielczości.",
+      "imageUrl": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 9,
+      "name": "Drukarka TGB",
+      "price": 499.99,
+      "description": "Szybka i wydajna drukarka laserowa.",
+      "imageUrl": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 10,
+      "name": "Klawiatura NHY",
+      "price": 199.99,
+      "description": "Mechaniczna klawiatura z podświetleniem RGB.",
+      "imageUrl": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 11,
+      "name": "Myszka MKO",
+      "price": 99.99,
+      "description": "Ergonomiczna myszka bezprzewodowa.",
+      "imageUrl": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 12,
+      "name": "Router PLM",
+      "price": 299.99,
+      "description": "Szybki router Wi-Fi o dużym zasięgu.",
+      "imageUrl": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 13,
+      "name": "Konsola UJH",
+      "price": 2499.99,
+      "description": "Konsola do gier nowej generacji.",
+      "imageUrl": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 14,
+      "name": "Karta Graficzna HGF",
+      "price": 1499.99,
+      "description": "Wysokiej klasy karta graficzna do gier.",
+      "imageUrl": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 15,
+      "name": "Procesor QAZ",
+      "price": 799.99,
+      "description": "Wydajny procesor do komputerów stacjonarnych.",
+      "imageUrl": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 16,
+      "name": "Pamięć RAM WSX",
+      "price": 399.99,
+      "description": "Szybka pamięć RAM do komputerów.",
+      "imageUrl": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 17,
+      "name": "Dysk SSD EDC",
+      "price": 599.99,
+      "description": "Szybki dysk SSD o dużej pojemności.",
+      "imageUrl": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 18,
+      "name": "Zasilacz RFV",
+      "price": 299.99,
+      "description": "Wydajny zasilacz do komputerów stacjonarnych.",
+      "imageUrl": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 19,
+      "name": "Chłodzenie CPU TGB",
+      "price": 199.99,
+      "description": "Efektywne chłodzenie procesora.",
+      "imageUrl": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 20,
+      "name": "Obudowa HNK",
+      "price": 399.99,
+      "description": "Stylowa obudowa komputerowa z podświetleniem.",
+      "imageUrl": "https://via.placeholder.com/150"
+    }
+  ]

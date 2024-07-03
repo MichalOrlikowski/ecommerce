@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import products from '../data/products';
+import products from '../data/products.json';
 
 const FormContainer = styled.div`
   padding: 20px;
