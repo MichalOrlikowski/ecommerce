@@ -12,17 +12,24 @@ import { useState } from 'react';
 
 function App() {
   const [products, setProducts] = useState(productsData);
+  const [cart, setCart] = useState([]);
+
+  const addToCart = (product) => {
+    setCart([...cart, product]);
+  };
 
   return (
     <Router>
       <Header />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/catalog" element={<ProductCatalog products={products} />} />
-        <Route path="/product/:id" element={<ProductDetail products={products} />} />
-        <Route path="/cart" element={<Cart />} />
+        <Route path="/catalog" element={<ProductCatalog products={products} addToCart={addToCart} />} />
+        <Route path="/product/:id" element={<ProductDetail products={products} addToCart={addToCart} />} />
+        <Route path="/cart" element={<Cart cart={cart} />} />
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/add-product" element={<AddProduct products={products} setProducts={setProducts} />} />
+        <Route path="/products" element={<ProductCatalog products={products} />} />
+        <Route path="*" element={<HomePage />} />
       </Routes>
       <Footer />
     </Router>

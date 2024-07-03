@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { useParams } from 'react-router-dom';
 
 const DetailContainer = styled.div`
   padding: 20px;
@@ -28,11 +27,17 @@ const ProductDescription = styled.p`
   color: #666;
 `;
 
-const ProductDetail = ({ products }) => {
-  const { id } = useParams();
-  const product = products.find(p => p.id === parseInt(id));
+const AddToCartButton = styled.button`
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+`;
 
-  if (!product) return <div>Ładowanie...</div>;
+const ProductDetail = ({ product, addToCart }) => {
+  if (!product) return <div>Loading...</div>;
 
   return (
     <DetailContainer>
@@ -40,8 +45,10 @@ const ProductDetail = ({ products }) => {
       <ProductName>{product.name}</ProductName>
       <ProductPrice>{product.price} PLN</ProductPrice>
       <ProductDescription>{product.description}</ProductDescription>
+      <AddToCartButton onClick={() => addToCart(product)}>Dodaj do koszyka</AddToCartButton>
     </DetailContainer>
   );
 };
 
 export default ProductDetail;
+

@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
+import productsData from '../data/products.json';
 
 const CatalogContainer = styled.div`
   padding: 20px;
@@ -36,7 +37,16 @@ const ProductDescription = styled.p`
   color: #666;
 `;
 
-const ProductCatalog = ({ products }) => {
+const AddToCartButton = styled.button`
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+`;
+
+const ProductCatalog = ({ products, addToCart }) => {
   return (
     <CatalogContainer>
       <h1>Katalog Produktów</h1>
@@ -47,6 +57,7 @@ const ProductCatalog = ({ products }) => {
             <ProductName>{product.name}</ProductName>
             <ProductPrice>{product.price} PLN</ProductPrice>
             <ProductDescription>{product.description}</ProductDescription>
+            <AddToCartButton onClick={() => addToCart(product)}>Dodaj do koszyka</AddToCartButton>
           </ProductCard>
         ))}
       </div>
