@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import productsData from '../data/products.json';
 
 const CatalogContainer = styled.div`
   padding: 20px;
@@ -37,13 +36,7 @@ const ProductDescription = styled.p`
   color: #666;
 `;
 
-const ProductCatalog = () => {
-  const [products, setProducts] = useState([]);
-
-  useEffect(() => {
-    setProducts(productsData);
-  }, []);
-
+const ProductCatalog = ({ products }) => {
   return (
     <CatalogContainer>
       <h1>Katalog Produktów</h1>

@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useParams } from 'react-router-dom';
 
 const DetailContainer = styled.div`
   padding: 20px;
@@ -27,8 +28,11 @@ const ProductDescription = styled.p`
   color: #666;
 `;
 
-const ProductDetail = ({ product }) => {
-  if (!product) return <div>Loading...</div>;
+const ProductDetail = ({ products }) => {
+  const { id } = useParams();
+  const product = products.find(p => p.id === parseInt(id));
+
+  if (!product) return <div>Ładowanie...</div>;
 
   return (
     <DetailContainer>
@@ -41,4 +45,3 @@ const ProductDetail = ({ product }) => {
 };
 
 export default ProductDetail;
-

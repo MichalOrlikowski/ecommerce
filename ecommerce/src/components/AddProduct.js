@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import products from '../data/products.json';
 
 const FormContainer = styled.div`
   padding: 20px;
@@ -35,7 +34,7 @@ const Button = styled.button`
   cursor: pointer;
 `;
 
-function AddProduct() {
+function AddProduct({ products, setProducts }) {
   const [name, setName] = useState('');
   const [price, setPrice] = useState('');
   const [description, setDescription] = useState('');
@@ -50,7 +49,7 @@ function AddProduct() {
       description,
       imageUrl,
     };
-    products.push(newProduct);
+    setProducts([...products, newProduct]);
     setName('');
     setPrice('');
     setDescription('');
@@ -84,3 +83,4 @@ function AddProduct() {
 }
 
 export default AddProduct;
+

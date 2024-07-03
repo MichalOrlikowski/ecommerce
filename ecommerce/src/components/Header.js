@@ -23,7 +23,7 @@ function Header() {
       <h1>Sklep Internetowy</h1>
       <div>
         <Link to="/">Strona Główna</Link>
-        <Link to="/products">Katalog Produktów</Link>
+        <Link to="/catalog">Katalog Produktów</Link>
         <Link to="/cart">Koszyk</Link>
         <Link to="/add-product">Dodaj Produkt</Link>
       </div>
