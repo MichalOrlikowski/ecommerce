@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import productsData from '../data/products.json';
 
 const CatalogContainer = styled.div`
   padding: 20px;

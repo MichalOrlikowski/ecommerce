@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useParams } from 'react-router-dom';
 
 const DetailContainer = styled.div`
   padding: 20px;
@@ -36,7 +37,10 @@ const AddToCartButton = styled.button`
   cursor: pointer;
 `;
 
-const ProductDetail = ({ product, addToCart }) => {
+const ProductDetail = ({ products, addToCart }) => {
+  const { id } = useParams();
+  const product = products.find(p => p.id === parseInt(id));
+
   if (!product) return <div>Loading...</div>;
 
   return (
@@ -51,4 +55,6 @@ const ProductDetail = ({ product, addToCart }) => {
 };
 
 export default ProductDetail;
+
+
 
