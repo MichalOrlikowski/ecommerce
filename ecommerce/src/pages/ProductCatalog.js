@@ -64,4 +64,6 @@ const ProductCatalog = ({ products, addToCart }) => {
   );
 };
 
+
+
 export default ProductCatalog;
