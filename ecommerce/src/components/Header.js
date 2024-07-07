@@ -1,34 +1,62 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { NavLink } from 'react-router-dom';
 
-const NavBar = styled.nav`
-  background: #333;
-  color: white;
+const HeaderContainer = styled.header`
+  background-color: #333;
   padding: 10px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: #fff;
+  flex-wrap: wrap;
+`;
 
-  a {
-    color: white;
-    text-decoration: none;
-    margin: 0 10px;
+const Logo = styled.h1`
+  font-size: 24px;
+  margin: 0;
+  @media (max-width: 768px) {
+    font-size: 20px;
   }
 `;
 
-function Header() {
-  return (
-    <NavBar>
-      <h1>Sklep Internetowy</h1>
-      <div>
-        <Link to="/">Strona Główna</Link>
-        <Link to="/catalog">Katalog Produktów</Link>
-        <Link to="/cart">Koszyk</Link>
-        <Link to="/add-product">Dodaj Produkt</Link>
-      </div>
-    </NavBar>
-  );
-}
+const Nav = styled.nav`
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+`;
+
+const NavItem = styled(NavLink)`
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 18px;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &.active {
+    font-weight: bold;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+    margin-left: 10px;
+  }
+`;
+
+const Header = () => (
+  <HeaderContainer>
+    <Logo>Sklep Internetowy</Logo>
+    <Nav>
+      <NavItem to="/">Strona Główna</NavItem>
+      <NavItem to="/catalog">Katalog Produktów</NavItem>
+      <NavItem to="/cart">Koszyk</NavItem>
+      <NavItem to="/add-product">Dodaj Produkt</NavItem>
+    </Nav>
+  </HeaderContainer>
+);
 
 export default Header;
+

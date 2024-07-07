@@ -2,7 +2,19 @@ import React from 'react';
 import styled from 'styled-components';
 
 const CatalogContainer = styled.div`
-  padding: 20px;
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+`;
+
+const ProductGrid = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const ProductCard = styled.div`
@@ -12,6 +24,12 @@ const ProductCard = styled.div`
   margin: 20px;
   width: 250px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: white;
+
+  @media (max-width: 480px) {
+    width: 100%;
+    margin: 10px 0;
+  }
 `;
 
 const ProductImage = styled.img`
@@ -49,7 +67,7 @@ const ProductCatalog = ({ products, addToCart }) => {
   return (
     <CatalogContainer>
       <h1>Katalog Produktów</h1>
-      <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+      <ProductGrid>
         {products.map(product => (
           <ProductCard key={product.id}>
             <ProductImage src={product.imageUrl} alt={product.name} />
@@ -59,11 +77,10 @@ const ProductCatalog = ({ products, addToCart }) => {
             <AddToCartButton onClick={() => addToCart(product)}>Dodaj do koszyka</AddToCartButton>
           </ProductCard>
         ))}
-      </div>
+      </ProductGrid>
     </CatalogContainer>
   );
 };
 
-
-
 export default ProductCatalog;
+

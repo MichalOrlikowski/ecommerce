@@ -2,21 +2,19 @@ import React from 'react';
 import styled from 'styled-components';
 
 const FooterContainer = styled.footer`
-  background: #333;
-  color: white;
+  background-color: #333;
+  color: #fff;
   text-align: center;
-  padding: 20px;
+  padding: 10px 0;
   position: fixed;
   bottom: 0;
   width: 100%;
 `;
 
-function Footer() {
-  return (
-    <FooterContainer>
-      <p>&copy; 2024 Sklep Internetowy. Wszelkie prawa zastrzeżone.</p>
-    </FooterContainer>
-  );
-}
+const Footer = () => (
+  <FooterContainer>
+    © 2024 Sklep Internetowy. Wszelkie prawa zastrzeżone.
+  </FooterContainer>
+);
 
 export default Footer;

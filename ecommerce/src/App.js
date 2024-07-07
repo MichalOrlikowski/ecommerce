@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import ProductCatalog from './pages/ProductCatalog';
@@ -6,8 +7,8 @@ import AddProduct from './components/AddProduct';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import productsData from './data/products.json';
-import { useState } from 'react';
 import styled from 'styled-components';
+import GlobalStyle from './GlobalStyle';
 
 const Notification = styled.div`
   background-color: #4caf50;
@@ -19,6 +20,13 @@ const Notification = styled.div`
   z-index: 1000;
   border-radius: 4px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+`;
+
+const MainContainer = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `;
 
 function App() {
@@ -38,7 +46,6 @@ function App() {
       }
       return [...prevCart, { ...product, quantity: 1 }];
     });
-    // Pokaż powiadomienie po dodaniu do koszyka
     setShowNotification(true);
     setTimeout(() => {
       setShowNotification(false);
@@ -68,20 +75,22 @@ function App() {
 
   return (
     <Router>
+      <GlobalStyle /> {/* Use GlobalStyle */}
       <Header />
       {showNotification && (
         <Notification>Produkt został dodany do koszyka</Notification>
       )}
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/catalog" element={<ProductCatalog products={products} addToCart={addToCart} />} />
-        <Route path="/cart" element={<Cart cart={cart} updateCartItem={updateCartItem} removeFromCart={removeFromCart} handleOrder={handleOrder} />} />
-        <Route path="/add-product" element={<AddProduct products={products} setProducts={setProducts} />} />
-      </Routes>
+      <MainContainer>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/catalog" element={<ProductCatalog products={products} addToCart={addToCart} />} />
+          <Route path="/cart" element={<Cart cart={cart} updateCartItem={updateCartItem} removeFromCart={removeFromCart} handleOrder={handleOrder} />} />
+          <Route path="/add-product" element={<AddProduct products={products} setProducts={setProducts} />} />
+        </Routes>
+      </MainContainer>
       <Footer />
     </Router>
   );
 }
 
 export default App;
-
